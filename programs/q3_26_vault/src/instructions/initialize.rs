@@ -2,6 +2,7 @@ use crate::{
     constants::{STATE, VAULT_SEED},
     state::VaultState,
 };
+
 use anchor_lang::{
     prelude::*,
     system_program::{transfer, Transfer},
@@ -27,6 +28,7 @@ pub struct Initialize<'info> {
         bump,
     )]
     pub vault: SystemAccount<'info>,
+
     pub system_program: Program<'info, System>,
 }
 

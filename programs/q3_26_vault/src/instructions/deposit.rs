@@ -3,6 +3,7 @@ use crate::{
     error::ErrorCode,
     state::VaultState,
 };
+
 use anchor_lang::{
     prelude::*,
     system_program::{transfer, Transfer},
@@ -25,6 +26,7 @@ pub struct Deposit<'info> {
         bump = vault_state.vault_bump
     )]
     pub vault: SystemAccount<'info>,
+
     pub system_program: Program<'info, System>,
 }
 
